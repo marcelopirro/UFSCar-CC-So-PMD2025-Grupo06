@@ -9,9 +9,13 @@
 
 ---
 
-## Introdução
+## Resumo
 
-Com o avanço das tecnologias de informação e o crescente consumo de conteúdo digital, a disseminação de notícias falsas – as chamadas *fake news* – tornou-se um dos maiores desafios da sociedade contemporânea. Esses conteúdos enganosos podem influenciar opiniões públicas, comprometer processos democráticos e gerar consequências sociais e econômicas significativas. Diante desse cenário, surge a necessidade de soluções tecnológicas capazes de identificar e mitigar a propagação de informações falsas de forma automatizada, rápida e escalável.
+O projeto tem como foco o desenvolvimento de um pipeline completo para a detecção automática de fake news, integrando tecnologias de armazenamento e processamento em larga escala. Utilizando o MongoDB Atlas como banco de dados NoSQL e o Apache Spark (PySpark) como plataforma de processamento distribuído, o sistema é capaz de armazenar, transformar e analisar milhares de notícias jornalísticas.
+
+A solução trabalha com um conjunto de dados obtido do Kaggle, contendo aproximadamente 44 mil notícias reais e falsas. Após o pré-processamento dos dados em Python, os registros são inseridos no MongoDB como documentos JSON. A partir daí, o Spark realiza operações de limpeza, tokenização, vetorização e transformação com TF-IDF. Com os dados preparados, são treinados modelos de machine learning para classificar os textos como verdadeiros ou falsos.
+
+Além da classificação automática, o projeto realiza uma análise exploratória linguística, identificando as palavras mais frequentes em conteúdos falsos, revelando padrões de escrita e vocabulário característicos. O pipeline completo é escalável, eficiente e compatível com aplicações reais, demonstrando a viabilidade técnica da integração entre MongoDB e Spark.
 
 ## Objetivo
 
