@@ -71,6 +71,9 @@ Essa integração garante uma **solução coesa e escalável**, capaz de lidar c
 7. **Análise Textual Exploratória** – identificação de padrões linguísticos e vocabulário frequente em fake news.  
 
 
+![Obtenção dos Dados](https://github.com/user-attachments/assets/32eb0e40-87ff-4f57-a9ec-25a35363f6bb)
+
+
 
 
 ## Resultados Esperados
