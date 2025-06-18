@@ -15,7 +15,7 @@ Com o avanço das tecnologias de informação e o crescente consumo de conteúdo
 
 ## Objetivo
 
-O objetivo deste projeto é desenvolver um pipeline completo para detecção automática de notícias falsas, com base na análise de padrões linguísticos em textos jornalísticos. As metas específicas incluem:
+ Nosso objetivo é desenvolver um pipeline completo de detecção de notícias falsas (fake news) por meio da análise de padrões linguísticos em textos jornalísticos. Buscamos demonstrar a aplicação de tecnologias NoSQL e frameworks de processamento distribuído para
 
 - Armazenar de forma flexível e escalável um volume significativo de notícias reais e falsas;
 - Processar os dados textuais em larga escala utilizando técnicas de NLP (*Natural Language Processing*);
@@ -27,15 +27,27 @@ O objetivo deste projeto é desenvolver um pipeline completo para detecção aut
 
 ### MongoDB Atlas
 
-O banco de dados NoSQL MongoDB Atlas foi escolhido por sua adequação ao armazenamento de dados semi-estruturados. A estrutura de documentos JSON facilita a modelagem de notícias jornalísticas, e a escalabilidade nativa em nuvem oferece flexibilidade para manipular grandes volumes de dados. A busca textual integrada e a fácil integração com outras ferramentas tornam o MongoDB a escolha ideal para este projeto.
+A escolha de um banco de dados NoSQL como o **MongoDB** é mais adequada para este projeto porque lidamos com dados textuais e semi-estruturados (notícias) que variam em formato e conteúdo.
+
+A natureza dos dados tratados no projeto — notícias jornalísticas — envolve estruturas semi-estruturadas, com campos como **título**, **categoria**, **conteúdo textual**, **data** e possíveis **metadados futuros**. O **MongoDB Atlas** resolve esse problema ao utilizar um modelo de documentos **JSON**, que se adapta perfeitamente a esse tipo de dado textual. Além disso, trata-se de uma solução **gerenciada na nuvem**, com fácil escalabilidade horizontal.
+
+Diferente dos bancos relacionais, que exigem esquemas rígidos e múltiplos *joins*, o MongoDB oferece uma **estrutura flexível**, possui **indexação** e **busca textual nativa**, e se integra diretamente ao **Apache Spark**, permitindo o **processamento distribuído eficiente** dos dados — algo essencial para o volume e complexidade das análises propostas.
 
 ### Apache Spark (PySpark)
 
-A análise e classificação de textos em larga escala requerem alto desempenho e capacidade de paralelismo. O Apache Spark, com seu módulo PySpark, oferece uma arquitetura distribuída que atende perfeitamente a esses requisitos. Com bibliotecas específicas para NLP e *machine learning*, como Spark NLP e MLlib, o Spark permite o pré-processamento, vetorização e classificação eficiente dos textos.
+A etapa de análise e classificação de *fake news* exige o processamento de grandes volumes de texto, tornando essencial o uso de uma ferramenta que suporte dados em escala. O **Apache Spark**, com seu módulo **PySpark**, é ideal para esse cenário, pois oferece uma **arquitetura distribuída** que permite escalabilidade horizontal do processamento, garantindo eficiência mesmo diante de grandes conjuntos de dados.
+
+O Spark conta com bibliotecas integradas como o **Spark MLlib**, voltado para *machine learning*, e o **Spark NLP**, utilizado para tratamento linguístico avançado. Além disso, sua **integração nativa com fontes de dados como o MongoDB** elimina etapas intermediárias de ETL, reduzindo a duplicação de dados e acelerando o fluxo de processamento.
+
+Outro diferencial do Spark é o uso de **DataFrames otimizados** e a **execução preguiçosa**, que contribuem para uma manipulação de dados mais eficiente, impactando diretamente na performance da aplicação.
 
 ### Integração MongoDB + Spark
 
-A integração entre MongoDB Atlas e Apache Spark é um dos principais pilares da arquitetura. O uso do conector oficial permite a leitura e escrita dos dados de forma distribuída, mantendo alta performance e reduzindo a latência entre armazenamento e processamento.
+A integração entre **MongoDB Atlas** e **Apache Spark** é um dos maiores diferenciais da arquitetura proposta, pois combina um armazenamento altamente flexível com um processamento intensivo de dados de forma eficiente.
+
+O conector oficial entre essas duas tecnologias permite a **leitura e escrita direta dos dados**, o que possibilita que o processamento ocorra no próprio local onde os dados estão armazenados. Isso reduz significativamente a latência e evita sobrecargas desnecessárias.
+
+Essa integração garante uma **solução coesa e escalável**, capaz de lidar com a armazenagem de dados textuais não estruturados, além de permitir sua análise em larga escala. As tecnologias foram escolhidas por oferecerem **alto desempenho**, **fácil integração**, **escalabilidade horizontal** e **alinhamento total com os objetivos acadêmicos e técnicos da disciplina**.
 
 ## Fonte de Dados
 
