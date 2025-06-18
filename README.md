@@ -70,17 +70,7 @@ Essa integração garante uma **solução coesa e escalável**, capaz de lidar c
 6. **Treinamento de Modelos** – aplicação de algoritmos como Naive Bayes e Regressão Logística.  
 7. **Análise Textual Exploratória** – identificação de padrões linguísticos e vocabulário frequente em fake news.  
 
-### Pipeline de Análise e Classificação de Notícias
 
-Como mencionado anteriormente, o projeto tem como objetivo **analisar e classificar notícias como verdadeiras ou falsas** a partir de um conjunto de dados obtido da plataforma Kaggle, composto pelos arquivos `Fake.csv` e `True.csv`. Esses dados representam textos jornalísticos de fontes confiáveis e não confiáveis, contendo colunas como **título**, **autor**, **data** e **conteúdo da notícia**.
-
-A primeira etapa do fluxo consiste na **obtenção dos dados em formato CSV**. Em seguida, realiza-se um **pré-processamento inicial com Python**, que inclui limpeza básica, como a **remoção de valores nulos**, a **unificação dos dois arquivos** e a **inserção de um rótulo binário** indicando se a notícia é verdadeira ou falsa.
-
-Após essa preparação, os dados são inseridos no **MongoDB Atlas**, onde são armazenados como documentos **JSON**, garantindo uma estrutura flexível e compatível com dados semi-estruturados.
-
-Na sequência, o processamento passa para o **Apache Spark**, que lê os dados diretamente do MongoDB através do **MongoDB Spark Connector**. Em seguida, com o **PySpark**, realiza-se o **pré-processamento textual**, que inclui etapas como **tokenização**, **vetorização** e o **cálculo do TF-IDF (Term Frequency-Inverse Document Frequency)**, convertendo os textos em representações numéricas.
-
-Com esses vetores prontos, inicia-se o **treinamento de modelos de *machine learning*** utilizando o **Spark MLlib**. Algoritmos como **Naive Bayes** e **Regressão Logística** são aplicados para ensinar o modelo a distinguir notícias falsas das verdadeiras. Todo o processo é realizado em um **ambiente distribuído**, aproveitando a **escalabilidade e desempenho do Apache Spark**.
 
 
 ## Resultados Esperados
