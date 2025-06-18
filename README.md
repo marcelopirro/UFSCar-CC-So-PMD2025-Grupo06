@@ -76,7 +76,7 @@ Essa integração garante uma **solução coesa e escalável**, capaz de lidar c
 
 
 
-### Resultados Esperados
+## Resultados Esperados
 
 Será desenvolvido um **pipeline funcional de ponta a ponta** para a detecção automática de *fake news*, abrangendo todas as etapas, desde a ingestão dos dados até a classificação final dos textos.
 
