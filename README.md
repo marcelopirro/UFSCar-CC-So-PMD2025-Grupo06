@@ -76,10 +76,15 @@ Essa integração garante uma **solução coesa e escalável**, capaz de lidar c
 
 
 
-## Resultados Esperados
+### Resultados Esperados
 
-O projeto entregará um pipeline funcional de ponta a ponta para a detecção automática de *fake news*, desde a ingestão até a classificação. O modelo treinado será avaliado por métricas como **acurácia**, **precisão** e **recall**, permitindo uma análise quantitativa de desempenho. A integração entre MongoDB Atlas e Spark será demonstrada em um cenário real, evidenciando a eficácia da arquitetura distribuída.
+Será desenvolvido um **pipeline funcional de ponta a ponta** para a detecção automática de *fake news*, abrangendo todas as etapas, desde a ingestão dos dados até a classificação final dos textos.
 
-Além disso, espera-se produzir uma análise textual qualitativa identificando as **palavras mais recorrentes em notícias falsas**, fornecendo indícios linguísticos úteis para a compreensão e identificação desses textos.
+O modelo de *machine learning* será avaliado com métricas relevantes, como **acurácia**, **precisão** e **recall**, proporcionando uma análise quantitativa consistente sobre o desempenho da solução.
+
+Além disso, o projeto visa demonstrar a **viabilidade técnica e prática** da integração entre **MongoDB Atlas** e **Apache Spark**, utilizando essas tecnologias em um cenário real de **classificação de textos em larga escala**.
+
+Complementando a etapa de classificação automatizada, também foi realizada uma **análise textual exploratória**, com o objetivo de identificar **padrões linguísticos comuns em fake news**. A partir dessa investigação, foram geradas **estatísticas relevantes**, como a **frequência das palavras mais recorrentes em textos falsos**, permitindo comparações com o vocabulário utilizado em notícias verdadeiras.
+
 
 ---
