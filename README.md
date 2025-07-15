@@ -52,7 +52,7 @@ Diante desse obstáculo, adaptamos a estratégia. **Mantivemos o ambiente Databr
 * **Conteúdo**: Cerca de 44.000 artigos de notícias, divididos nos arquivos `Fake.csv` e `True.csv`.
 * **Atributos**: título, conteúdo, categoria, data de publicação.
 
-## Fluxo do Projeto
+## Fluxograma do Projeto
 
 1.  **Obtenção dos Dados** – Download dos arquivos CSV do Kaggle.
 2.  **Pré-processamento Inicial** – Limpeza e padronização em Python.
@@ -61,6 +61,7 @@ Diante desse obstáculo, adaptamos a estratégia. **Mantivemos o ambiente Databr
 5.  **Processamento e Análise** – Utilização da biblioteca `scikit-learn` para tokenização, vetorização com TF-IDF e preparação dos dados para o modelo.
 6.  **Treinamento de Modelos** – Aplicação de algoritmos de Machine Learning, como Naive Bayes, para classificação.
 7.  **Análise Textual Exploratória** – Identificação de padrões linguísticos e vocabulário frequente em fake news.
+<img width="1920" height="1080" alt="fluxograma" src="https://github.com/user-attachments/assets/6611d4f0-298b-4efc-bca8-a38f65511e47" />
 
 ## Desenvolvimento e Implementação
 
