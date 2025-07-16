@@ -150,7 +150,7 @@ O pipeline, demonstrou ser eficaz ao integrar **MongoDB Atlas**, **Pymongo**, e 
 
 ---
 
-### Métricas Principais (Para cada classe):
+#### Métricas Principais (Para cada classe):
 
 | **Métrica**   | **Classe 0 (Fake)** | **Classe 1 (Real)** | **Explicação**                                                                 |
 |---------------|---------------------|----------------------|----------------------------------------------------------------------------------|
@@ -159,7 +159,7 @@ O pipeline, demonstrou ser eficaz ao integrar **MongoDB Atlas**, **Pymongo**, e 
 | F1-Score      | 0.94                | 0.93                 | Média harmônica entre Precision e Recall (ótimo equilíbrio entre ambos)         |
 | Support       | 4733                | 4247                 | Número de amostras em cada classe no conjunto de teste                          |
 
-### Métricas Globais:
+#### Métricas Globais:
 
 | **Métrica**     | **Valor** | **Explicação**                                                                 |
 |-----------------|-----------|----------------------------------------------------------------------------------|
@@ -181,7 +181,7 @@ A matriz de confusão abaixo representa o desempenho do modelo na tarefa de clas
 
 ---
 
-### 🧠 Interpretação:
+##### 🧠 Interpretação:
 
 - **4467** notícias falsas foram corretamente classificadas como falsas (**Verdadeiros Negativos**).
 - **3962** notícias verdadeiras foram corretamente classificadas como verdadeiras (**Verdadeiros Positivos**).
@@ -190,7 +190,7 @@ A matriz de confusão abaixo representa o desempenho do modelo na tarefa de clas
 
 ---
 
-### 📌 Conclusão:
+##### 📌 Conclusão:
 
 O modelo errou relativamente pouco em ambos os sentidos:
 
@@ -199,10 +199,13 @@ O modelo errou relativamente pouco em ambos os sentidos:
 
 Esses resultados confirmam que o modelo está **bem equilibrado** e apresenta **excelente desempenho**, o que também é refletido nas métricas globais (accuracy, precision, recall, f1-score).
 
-## Resultados Esperados
+#### 6. Análise Quantitativa
+##### 6.1. Palavras Mais Frequentes por Classe
+A análise das palavras mais frequentes em notícias falsas e reais revela padrões linguísticos distintos entre os dois grupos. Nas fake news, termos como "hillary", "clinton", "obama", "trump" e "donald" dominam o vocabulário, indicando um forte viés político e a utilização de figuras polarizadoras para chamar atenção. Palavras como "us", "president", "people" e "state" sugerem um foco em temas nacionais e governamentais, frequentemente associados a teorias da conspiração ou desinformação estratégica. Além disso, o uso de termos como "would", "even", "like" e "said" aponta para um tom mais hipotético e emocional, característico de manchetes sensacionalistas.
 
-Será desenvolvido um **pipeline funcional de ponta a ponta** para a detecção automática de *fake news*, abrangendo todas as etapas, desde a ingestão dos dados até a classificação final dos textos.
+Por outro lado, as notícias reais apresentam um perfil linguístico mais neutro e factual. Termos como "washington", "united", "states", "government" e "republican" refletem uma abordagem mais institucional e formal, típica de veículos jornalísticos tradicionais. Expressões como "told", "could", "last" e "house" indicam um discurso mais descritivo e menos carregado de emoção. Embora "trump" e "president" também apareçam com frequência, seu uso é menos dominante e mais contextualizado, sugerindo uma cobertura mais equilibrada.
 
-O modelo de *machine learning* será avaliado com métricas relevantes, como **acurácia**, **precisão** e **recall**, proporcionando uma análise quantitativa consistente sobre o desempenho da solução.
+Esses resultados destacam diferenças claras na linguagem utilizada por cada tipo de conteúdo. Notícias falsas tendem a explorar nomes próprios e termos emocionalmente carregados para criar narrativas persuasivas, enquanto notícias reais priorizam um vocabulário mais técnico e imparcial. Essa distinção pode ser útil no desenvolvimento de modelos de detecção de fake news, que podem se beneficiar da identificação desses padrões linguísticos.
+<img width="1381" height="552" alt="image" src="https://github.com/user-attachments/assets/6fb4deb7-536c-42b8-a818-f4ea10d8ed5d" />
 
 Além disso, o projeto visa demonstrar a **viabilidade técnica e prática** da integração entre **MongoDB Atlas** e **Python (com Pymongo e Scikit-learn)** em um ambiente **Databricks**, utilizando essas tecnologias em um cenário real de **classificação de textos em larga escala**.
