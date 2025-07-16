@@ -208,4 +208,44 @@ Por outro lado, as notícias reais apresentam um perfil linguístico mais neutro
 Esses resultados destacam diferenças claras na linguagem utilizada por cada tipo de conteúdo. Notícias falsas tendem a explorar nomes próprios e termos emocionalmente carregados para criar narrativas persuasivas, enquanto notícias reais priorizam um vocabulário mais técnico e imparcial. Essa distinção pode ser útil no desenvolvimento de modelos de detecção de fake news, que podem se beneficiar da identificação desses padrões linguísticos.
 <img width="1381" height="552" alt="image" src="https://github.com/user-attachments/assets/6fb4deb7-536c-42b8-a818-f4ea10d8ed5d" />
 
-Além disso, o projeto visa demonstrar a **viabilidade técnica e prática** da integração entre **MongoDB Atlas** e **Python (com Pymongo e Scikit-learn)** em um ambiente **Databricks**, utilizando essas tecnologias em um cenário real de **classificação de textos em larga escala**.
+##### 6.2. Nuvem de Palavras (Word Cloud)
+As nuvens de palavras geradas para fake news e notícias reais reforçam e complementam os padrões identificados na análise de frequência de termos, oferecendo uma visualização intuitiva das diferenças linguísticas entre os dois grupos.
+
+Fake News:
+Na nuvem de palavras das fake news, destacam-se visualmente termos como "Trump", "Hillary", "Clinton", "Obama" e "president", confirmando o foco em figuras políticas polarizadoras. A presença marcante desses nomes próprios, muitas vezes em tamanhos maiores devido à sua alta frequência, sugere que as fake news frequentemente se aproveitam da notoriedade dessas personalidades para atrair atenção e engajamento. Além disso, palavras como "people", "us", "state" e "time" aparecem com destaque, indicando uma tendência a abordar temas de interesse nacional de forma sensacionalista ou manipuladora. A repetição de termos como "would" e "even" reforça o tom hipotético e emocional, característico de manchetes projetadas para provocar reações imediatas.
+
+Notícias Reais:
+Em contraste, a nuvem de palavras das notícias reais apresenta um vocabulário mais diversificado e menos centrado em indivíduos específicos. Termos como "Washington", "United", "States", "government" e "House" predominam, refletindo uma abordagem mais institucional e factual. A presença de palavras como "told", "last" e "new" sugere um discurso mais informativo e menos carregado de opinião ou emoção. Embora "Trump" e "president" ainda apareçam, seu tamanho relativo é menor, indicando uma cobertura mais equilibrada e menos focada em personalidades.
+<img width="1185" height="307" alt="image" src="https://github.com/user-attachments/assets/4b4f1904-00c9-443c-9312-19daf86eaa4c" />
+
+##### 6.3. Distribuição de Tamanho dos Textos
+A análise da distribuição do tamanho dos textos mostra que a maioria se concentra entre 0 e 5.000 caracteres, revelando uma predominância de textos relativamente curtos. Observa-se um pico em torno de 2.000 caracteres, principalmente na curva associada ao label 0 (falso), o que sugere que esses textos tendem a ser ligeiramente mais longos. Apesar dessas diferenças sutis, as distribuições entre os rótulos são bastante semelhantes, indicando que o tamanho dos textos, isoladamente, pode não ser um fator decisivo para a diferenciação entre as classes
+<img width="886" height="557" alt="image" src="https://github.com/user-attachments/assets/180d2460-54a0-427c-84c2-d9b5b69f7736" />
+
+##### 6.4. Frequência de Bigramas (Pares de Palavras)
+A análise de bigramas revela diferenças marcantes na construção linguística entre fake news e notícias reais. Nos conteúdos falsos, observa-se uma predominância de combinações envolvendo figuras políticas polarizadoras, como "donald trump", "hillary clinton" e "barack obama", que juntas representam a maioria dos pares mais frequentes. Este padrão sugere uma estratégia deliberada de associar a desinformação a personalidades já carregadas de significado político, aproveitando-se de vieses cognitivos pré-existentes no público. Além disso, a presença de termos institucionais como "white house" e "united states", frequentemente descontextualizados, parece servir para emprestar uma falsa aura de credibilidade ao conteúdo.
+
+Em contraste, as notícias reais apresentam uma estrutura linguística mais diversificada e jornalisticamente convencional. Bigramas como "trump said" e "said statement" seguem o padrão profissional de atribuição clara de fontes, enquanto combinações como "prime minister" e "north korea" demonstram uma cobertura mais ampla de temas internacionais. A presença consistente de verbos de relato ("said") e a maior variedade temática indicam uma abordagem mais equilibrada e contextualizada dos fatos. Vale notar que alguns termos como "white house" aparecem em ambos os grupos, porém com usos distintos: nas fake news tendem a aparecer isolados, enquanto nas notícias reais estão normalmente inseridos em estruturas gramaticais mais completas.
+
+Estes achados têm implicações práticas significativas para o combate à desinformação. Sistemas automatizados de detecção de fake news podem se beneficiar ao incorporar a análise de bigramas, priorizando alertas para sequências repetitivas de nomes próprios e a ausência de estruturas de atribuição típicas do jornalismo profissional. Da mesma forma, iniciativas de educação midiática deveriam enfatizar como identificar esses padrões linguísticos distintos, capacitando o público a reconhecer as estratégias discursivas típicas da desinformação. Para pesquisas futuras, seria produtivo investigar como esses padrões se modificam em contextos específicos, como períodos eleitorais ou crises internacionais, e como se relacionam com as dinâmicas de viralização nas redes sociais.
+<img width="1350" height="536" alt="image" src="https://github.com/user-attachments/assets/2b0ec9da-d07b-4081-a148-5def1e163bbe" />
+
+##### 6.4. Frequência de Trigramas (Pares de Palavras)
+A análise de trigramas (combinações de três palavras) revela padrões ainda mais distintos entre fake news e notícias reais do que os observados nos bigramas. Nos conteúdos falsos, destacam-se estruturas que combinam termos institucionais com alegações não verificadas, como "century wire says" e "video screen capture", que sugerem tentativas de validar informações através de supostas evidências visuais ou fontes obscuras. A presença marcante de "president barack obama", "president donald trump" e "president united states" em contextos desconexos indica a apropriação de cargos e instituições para dar aparência de legitimidade a conteúdos enganosos.
+
+Notícias reais, por outro lado, apresentam trigramas que refletem práticas jornalísticas convencionais, como "white house said" e "reuters president donald", que demonstram preocupação com atribuição precisa de declarações. A variedade de combinações, incluindo "secretary state rex" (referindo-se a Rex Tillerson) e "president vladimir putin", mostra uma cobertura mais ampla e contextualizada de assuntos políticos. Curiosamente, enquanto as fake news usam "new york times" de forma isolada, possivelmente para se aproveitar da credibilidade do veículo, as notícias reais mencionam "new york routers" em contextos específicos de infraestrutura.
+
+Estes padrões sugerem que:
+
+- Fake news utilizam trigramas para criar falsas associações entre instituições, pessoas públicas e alegações não verificadas
+
+- Notícias reais empregam combinações de três palavras principalmente para:
+
+    - Atribuir declarações de forma precisa
+
+    - Contextualizar informações dentro de estruturas narrativas mais complexas
+
+    - Abordar uma gama mais diversificada de tópicos
+<img width="1345" height="671" alt="image" src="https://github.com/user-attachments/assets/01acef1c-ee55-4989-a6c2-bfa105dc8640" />
+
+
