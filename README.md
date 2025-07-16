@@ -67,11 +67,11 @@ Diante desse obstáculo, adaptamos a estratégia. **Mantivemos o ambiente Databr
 ```mermaid
 flowchart TD
     A[Obtenção dos Dados<br>(CSV do Kaggle)] --> B[Pré-processamento Inicial<br>(Limpeza e Padronização)]
-    B --> C[Inserção no MongoDB Atlas<br>(Collections: Fake e Real)]
-    C --> D[Leitura com Pymongo<br>no Databricks]
-    D --> E[Processamento e Análise<br>(Tokenização, TF-IDF)]
-    E --> F[Treinamento de Modelos<br>(Naive Bayes)]
-    F --> G[Análise Textual Exploratória<br>(Padrões Linguísticos)]
+    B --> C[Inserção no MongoDB Atlas (Collections: Fake e Real)]
+    C --> D[Leitura com Pymongo no Databricks]
+    D --> E[Processamento e Análise (Tokenização, TF-IDF)]
+    E --> F[Treinamento de Modelos (Naive Bayes)]
+    F --> G[Análise Textual Exploratória (Padrões Linguísticos)]
 ```
 
 
