@@ -150,8 +150,6 @@ O pipeline, demonstrou ser eficaz ao integrar **MongoDB Atlas**, **Pymongo**, e 
 
 ---
 
-## 📊 Análise do Relatório de Classificação
-
 ### Métricas Principais (Para cada classe):
 
 | **Métrica**   | **Classe 0 (Fake)** | **Classe 1 (Real)** | **Explicação**                                                                 |
