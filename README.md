@@ -61,6 +61,24 @@ Diante desse obstáculo, adaptamos a estratégia. **Mantivemos o ambiente Databr
 5.  **Processamento e Análise** – Utilização da biblioteca `scikit-learn` para tokenização, vetorização com TF-IDF e preparação dos dados para o modelo.
 6.  **Treinamento de Modelos** – Aplicação de algoritmos de Machine Learning, como Naive Bayes, para classificação.
 7.  **Análise Textual Exploratória** – Identificação de padrões linguísticos e vocabulário frequente em fake news.
+
+## 📊 Fluxo do Pipeline de Análise de Fake News
+
+```mermaid
+graph TD
+    A[1. Obtenção dos Dados] -->|CSV do Kaggle| B[2. Pré-processamento Inicial]
+    B -->|Dados Limpos| C[3. Inserção no MongoDB Atlas]
+    C -->|JSON Documents| D[4. Leitura com PyMongo]
+    D -->|Collections Fake/Real| E[5. Processamento e Análise]
+    E -->|TF-IDF/Vetorização| F[6. Treinamento de Modelos]
+    F -->|Modelos Treinados| G[7. Análise Textual Exploratória]
+    G -->|Padrões Linguísticos| H[(Resultados/Insights)]
+
+    classDef stage fill:#f0f8ff,stroke:#4682b4,stroke-width:2px;
+    class A,B,C,D,E,F,G,H stage;
+```
+
+
 <img width="1920" height="1080" alt="fluxograma" src="https://github.com/user-attachments/assets/6611d4f0-298b-4efc-bca8-a38f65511e47" />
 
 ## Desenvolvimento e Implementação
