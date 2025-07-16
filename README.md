@@ -290,20 +290,16 @@ Os resultados sugerem que a combinação dessas características pode servir com
 1. **MongoDB Atlas e Integração com Python (PyMongo)**  
    MongoDB, Inc. (2024). *A Guide to Connect Databricks and MongoDB Atlas using Python API*. CloudThat.  
    Disponível em: [https://www.cloudthat.com/resources/blog/a-guide-to-connect-databricks-and-mongodb-atlas-using-python-api](https://www.cloudthat.com/resources/blog/a-guide-to-connect-databricks-and-mongodb-atlas-using-python-api)  
-   > Explica como integrar MongoDB Atlas com Databricks usando a API Python, destacando escalabilidade, segurança e facilidade de uso.
 
 2. **Databricks e Processamento de Dados com MongoDB Atlas**  
    Raisinghani, A. (2024). *Utilizing PySpark to Connect MongoDB Atlas with Azure Databricks*. MongoDB Developer Center.  
    Disponível em: [https://www.mongodb.com/developer/languages/python/atlas-databricks-pyspark-demo](https://www.mongodb.com/developer/languages/python/atlas-databricks-pyspark-demo)  
-   > Embora o foco seja PySpark, o artigo fornece insights sobre a arquitetura e os benefícios da integração entre Databricks e MongoDB Atlas.
 
 3. **Documentação Oficial do PyMongo**  
    MongoDB, Inc. (2025). *PyMongo Documentation*.  
    Disponível em: [https://pymongo.readthedocs.io](https://pymongo.readthedocs.io)  
-   > Manual oficial da biblioteca PyMongo, utilizada para conectar aplicações Python ao MongoDB.
 
 4. **Documentação Oficial do Databricks**  
    Databricks, Inc. (2025). *Databricks Documentation*.  
    Disponível em: [https://docs.databricks.com](https://docs.databricks.com)  
-   > Guia completo sobre como usar notebooks, clusters e integrações com fontes externas como MongoDB.
 
