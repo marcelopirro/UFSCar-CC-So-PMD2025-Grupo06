@@ -284,3 +284,26 @@ Uma das principais vantagens dessa arquitetura foi sua escalabilidade. O MongoDB
 Os aprendizados dessa experiência destacam o potencial dessa stack tecnológica para projetos de processamento de linguagem natural. A ausência de PySpark não se mostrou uma limitação, demonstrando que soluções baseadas em Python puro podem ser perfeitamente adequadas para muitos cenários de análise textual. Para trabalhos futuros, recomenda-se explorar ainda mais as capacidades do MongoDB Atlas, como a implementação de índices de texto completo para consultas mais sofisticadas, e a automação de pipelines para atualização contínua das análises. Esta abordagem mostrou-se robusta o suficiente para servir como base para pesquisas mais avançadas na área de detecção de desinformação.
 
 Os resultados sugerem que a combinação dessas características pode servir como base eficaz para sistemas de classificação automática, destacando-se especialmente o potencial da análise de trigramas e padrões de sentimento como features discriminativas. Para o público geral, estes achados oferecem indicadores práticos para identificação de conteúdo suspeito, como excesso de nomes de figuras públicas, tom emocional extremo e falta de fontes claramente atribuídas. Apesar das limitações inerentes ao escopo do estudo - como a necessidade de validação em diferentes contextos culturais e temporais - esta pesquisa fornece evidências robustas sobre as assinaturas linguísticas da desinformação, abrindo caminho tanto para o aprimoramento de ferramentas tecnológicas quanto para estratégias mais efetivas de alfabetização midiática. Como próximos passos, podemos ter a integração dessas descobertas em modelos preditivos e a criação de materiais educativos que traduzam esses padrões em orientações acessíveis para o público geral.
+
+# 📚 Referências Bibliográficas Sugeridas
+
+1. **MongoDB Atlas e Integração com Python (PyMongo)**  
+   MongoDB, Inc. (2024). *A Guide to Connect Databricks and MongoDB Atlas using Python API*. CloudThat.  
+   Disponível em: [https://www.cloudthat.com/resources/blog/a-guide-to-connect-databricks-and-mongodb-atlas-using-python-api](https://www.cloudthat.com/resources/blog/a-guide-to-connect-databricks-and-mongodb-atlas-using-python-api)  
+   > Explica como integrar MongoDB Atlas com Databricks usando a API Python, destacando escalabilidade, segurança e facilidade de uso.
+
+2. **Databricks e Processamento de Dados com MongoDB Atlas**  
+   Raisinghani, A. (2024). *Utilizing PySpark to Connect MongoDB Atlas with Azure Databricks*. MongoDB Developer Center.  
+   Disponível em: [https://www.mongodb.com/developer/languages/python/atlas-databricks-pyspark-demo](https://www.mongodb.com/developer/languages/python/atlas-databricks-pyspark-demo)  
+   > Embora o foco seja PySpark, o artigo fornece insights sobre a arquitetura e os benefícios da integração entre Databricks e MongoDB Atlas.
+
+3. **Documentação Oficial do PyMongo**  
+   MongoDB, Inc. (2025). *PyMongo Documentation*.  
+   Disponível em: [https://pymongo.readthedocs.io](https://pymongo.readthedocs.io)  
+   > Manual oficial da biblioteca PyMongo, utilizada para conectar aplicações Python ao MongoDB.
+
+4. **Documentação Oficial do Databricks**  
+   Databricks, Inc. (2025). *Databricks Documentation*.  
+   Disponível em: [https://docs.databricks.com](https://docs.databricks.com)  
+   > Guia completo sobre como usar notebooks, clusters e integrações com fontes externas como MongoDB.
+
