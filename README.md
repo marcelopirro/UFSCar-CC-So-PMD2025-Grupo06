@@ -189,14 +189,6 @@ A matriz de confusão abaixo representa o desempenho do modelo na tarefa de clas
 
 ---
 
-## Conclusão:
-
-O modelo errou relativamente pouco em ambos os sentidos:
-
-- Baixo número de **falsos positivos** (notícia verdadeira sendo marcada como falsa);
-- Baixo número de **falsos negativos** (notícia falsa sendo considerada verdadeira).
-
-Esses resultados confirmam que o modelo está **bem equilibrado** e apresenta **excelente desempenho**, o que também é refletido nas métricas globais (accuracy, precision, recall, f1-score).
 
 ## Análise Quantitativa
 ### 1. Palavras Mais Frequentes por Classe
@@ -269,3 +261,22 @@ A análise aponta para a relevância dessas features em modelos de detecção, e
 | Fake News (0) | 1740.86                          | 230.74                        |
 | Notícias Reais (1) | 1719.16                          | 226.66                        |
 
+
+## Conclusão:
+
+O modelo errou relativamente pouco em ambos os sentidos:
+
+- Baixo número de **falsos positivos** (notícia verdadeira sendo marcada como falsa);
+- Baixo número de **falsos negativos** (notícia falsa sendo considerada verdadeira).
+
+Esses resultados confirmam que o modelo está **bem equilibrado** e apresenta **excelente desempenho**, o que também é refletido nas métricas globais (accuracy, precision, recall, f1-score).
+
+ste trabalho realizou uma análise detalhada de fake news e notícias reais utilizando uma infraestrutura tecnológica composta por MongoDB Atlas, PyMongo e Databricks. Essa combinação mostrou-se extremamente eficiente para todo o fluxo de trabalho, desde o armazenamento dos dados até a execução das análises textuais e estatísticas. O MongoDB Atlas foi utilizado como banco de dados principal, armazenando tanto os textos brutos quanto os metadados e resultados das análises processadas. Sua estrutura flexível de documentos JSON permitiu acomodar facilmente diferentes tipos de dados, desde o conteúdo textual original até as features extraídas, como n-gramas e scores de sentimento.
+
+A integração com o PyMongo foi fundamental para conectar o ambiente de análise ao banco de dados. Essa biblioteca Python permitiu operações eficientes de inserção, consulta e atualização dos dados, garantindo que todas as etapas do processamento fossem adequadamente registradas. No Databricks, os notebooks proporcionaram um ambiente colaborativo e organizado para desenvolver as análises, com a vantagem adicional de poder visualizar os resultados diretamente no mesmo ambiente onde o código era executado. Essa combinação de tecnologias mostrou-se particularmente adequada para projetos de análise textual, oferecendo o equilíbrio ideal entre flexibilidade e poder de processamento.
+
+Uma das principais vantagens dessa arquitetura foi sua escalabilidade. O MongoDB Atlas garantiu desempenho consistente mesmo com o crescimento do volume de dados, enquanto o Databricks forneceu a capacidade computacional necessária para as análises mais complexas. A natureza schemaless do MongoDB provou-se especialmente útil durante o desenvolvimento, permitindo adaptar a estrutura dos dados conforme novas necessidades de análise surgiam, sem exigir mudanças complexas no banco de dados. Essa flexibilidade foi crucial para um projeto de pesquisa que evoluiu iterativamente, com a descoberta de novas features e métricas ao longo do trabalho.
+
+Os aprendizados dessa experiência destacam o potencial dessa stack tecnológica para projetos de processamento de linguagem natural. A ausência de PySpark não se mostrou uma limitação, demonstrando que soluções baseadas em Python puro podem ser perfeitamente adequadas para muitos cenários de análise textual. Para trabalhos futuros, recomenda-se explorar ainda mais as capacidades do MongoDB Atlas, como a implementação de índices de texto completo para consultas mais sofisticadas, e a automação de pipelines para atualização contínua das análises. Esta abordagem mostrou-se robusta o suficiente para servir como base para pesquisas mais avançadas na área de detecção de desinformação.
+
+Os resultados sugerem que a combinação dessas características pode servir como base eficaz para sistemas de classificação automática, destacando-se especialmente o potencial da análise de trigramas e padrões de sentimento como features discriminativas. Para o público geral, estes achados oferecem indicadores práticos para identificação de conteúdo suspeito, como excesso de nomes de figuras públicas, tom emocional extremo e falta de fontes claramente atribuídas. Apesar das limitações inerentes ao escopo do estudo - como a necessidade de validação em diferentes contextos culturais e temporais - esta pesquisa fornece evidências robustas sobre as assinaturas linguísticas da desinformação, abrindo caminho tanto para o aprimoramento de ferramentas tecnológicas quanto para estratégias mais efetivas de alfabetização midiática. Como próximos passos, podemos ter a integração dessas descobertas em modelos preditivos e a criação de materiais educativos que traduzam esses padrões em orientações acessíveis para o público geral.
