@@ -137,6 +137,70 @@ model.fit(X_train, y_train)
 
 O desempenho do modelo foi avaliado com um relatório de classificação e uma matriz de confusão, que nos permitem medir a acurácia, precisão e outras métricas importantes para validar a eficácia da classificação.
 
+O modelo treinado com **Multinomial Naive Bayes** apresentou um excelente desempenho na tarefa de detecção automática de *fake news*. A avaliação do modelo no conjunto de teste resultou em uma **acurácia de 94%**, com métricas equilibradas para ambas as classes (notícias falsas e verdadeiras).
+
+Abaixo, destacamos os principais resultados obtidos:
+
+- **Precision** de 94% em ambas as classes, indicando uma baixa taxa de falsos positivos.
+- **Recall** de 94% para a classe 0 (fake) e 93% para a classe 1 (real), refletindo uma boa capacidade de identificação dos casos reais.
+- **F1-score** de 0.94 e 0.93, demonstrando equilíbrio entre precisão e recall.
+- **Matriz de confusão** evidencia que a grande maioria das previsões foram corretas, com poucos erros relativos.
+
+O pipeline, demonstrou ser eficaz ao integrar **MongoDB Atlas**, **Pymongo**, e **Scikit-learn** em um ambiente **Databricks**, viabilizando um fluxo completo de ingestão, processamento e classificação de textos jornalísticos em larga escala.
+
+---
+
+## 📊 Análise do Relatório de Classificação
+
+### Métricas Principais (Para cada classe):
+
+| **Métrica**   | **Classe 0 (Fake)** | **Classe 1 (Real)** | **Explicação**                                                                 |
+|---------------|---------------------|----------------------|----------------------------------------------------------------------------------|
+| Precision     | 0.94                | 0.94                 | 94% das previsões positivas estão corretas (baixa taxa de falsos positivos)      |
+| Recall        | 0.94                | 0.93                 | 94% / 93% dos casos reais foram identificados (baixa taxa de falsos negativos)  |
+| F1-Score      | 0.94                | 0.93                 | Média harmônica entre Precision e Recall (ótimo equilíbrio entre ambos)         |
+| Support       | 4733                | 4247                 | Número de amostras em cada classe no conjunto de teste                          |
+
+### Métricas Globais:
+
+| **Métrica**     | **Valor** | **Explicação**                                                                 |
+|-----------------|-----------|----------------------------------------------------------------------------------|
+| Accuracy        | 0.94      | 94% de acerto geral (excelente para problemas balanceados)                     |
+| Macro Avg       | 0.94      | Média simples das métricas (igual peso para ambas as classes)                  |
+
+
+A matriz de confusão abaixo representa o desempenho do modelo na tarefa de classificação de notícias falsas (Fake) e verdadeiras (Real):
+
+```
+[[4467  266]
+ [ 285 3962]]
+```
+
+|                         | **Previsto: Fake (0)** | **Previsto: Real (1)** |
+|-------------------------|------------------------|-------------------------|
+| **Verdadeiro: Fake (0)**| 4467 ✅ (Verdadeiro Negativo - TN) | 266 ❌ (Falso Positivo - FP) |
+| **Verdadeiro: Real (1)**| 285 ❌ (Falso Negativo - FN)       | 3962 ✅ (Verdadeiro Positivo - TP) |
+
+---
+
+### 🧠 Interpretação:
+
+- **4467** notícias falsas foram corretamente classificadas como falsas (**Verdadeiros Negativos**).
+- **3962** notícias verdadeiras foram corretamente classificadas como verdadeiras (**Verdadeiros Positivos**).
+- **266** notícias verdadeiras foram incorretamente classificadas como falsas (**Falsos Positivos**).
+- **285** notícias falsas foram incorretamente classificadas como verdadeiras (**Falsos Negativos**).
+
+---
+
+### 📌 Conclusão:
+
+O modelo errou relativamente pouco em ambos os sentidos:
+
+- Baixo número de **falsos positivos** (notícia verdadeira sendo marcada como falsa);
+- Baixo número de **falsos negativos** (notícia falsa sendo considerada verdadeira).
+
+Esses resultados confirmam que o modelo está **bem equilibrado** e apresenta **excelente desempenho**, o que também é refletido nas métricas globais (accuracy, precision, recall, f1-score).
+
 ## Resultados Esperados
 
 Será desenvolvido um **pipeline funcional de ponta a ponta** para a detecção automática de *fake news*, abrangendo todas as etapas, desde a ingestão dos dados até a classificação final dos textos.
