@@ -65,17 +65,13 @@ Diante desse obstáculo, adaptamos a estratégia. **Mantivemos o ambiente Databr
 ## 📊 Fluxo do Pipeline de Análise de Fake News
 
 ```mermaid
-graph TD
-    A[1. Obtenção dos Dados] -->|CSV do Kaggle| B[2. Pré-processamento Inicial]
-    B -->|Dados Limpos| C[3. Inserção no MongoDB Atlas]
-    C -->|JSON Documents| D[4. Leitura com PyMongo]
-    D -->|Collections Fake/Real| E[5. Processamento e Análise]
-    E -->|TF-IDF/Vetorização| F[6. Treinamento de Modelos]
-    F -->|Modelos Treinados| G[7. Análise Textual Exploratória]
-    G -->|Padrões Linguísticos| H[(Resultados/Insights)]
-
-    classDef stage fill:#f0f8ff,stroke:#4682b4,stroke-width:2px;
-    class A,B,C,D,E,F,G,H stage;
+flowchart TD
+    A[Obtenção dos Dados<br>(CSV do Kaggle)] --> B[Pré-processamento Inicial<br>(Limpeza e Padronização)]
+    B --> C[Inserção no MongoDB Atlas<br>(Collections: Fake e Real)]
+    C --> D[Leitura com Pymongo<br>no Databricks]
+    D --> E[Processamento e Análise<br>(Tokenização, TF-IDF)]
+    E --> F[Treinamento de Modelos<br>(Naive Bayes)]
+    F --> G[Análise Textual Exploratória<br>(Padrões Linguísticos)]
 ```
 
 
