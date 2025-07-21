@@ -1,13 +1,15 @@
-# UFSCar-CC-So-PMD2025-Grupo06
+# Projeto de Disciplina – **Detecção de Fake News com Processamento em Larga Escala Utilizando MongoDB Atlas e Python**
 
-**Autores:**
+**Universidade Federal de São Carlos**  
+**Curso:** Bacharelado em Ciência da Computação de Sorocaba  
+**Disciplina:** Processamento Massivo de Dados  
+**Professora:** Profa. Dra. Sahudy Montenegro González  
+
+**Grupo XX**  
+
+**Integrantes:**
 * Marcelo Pirro – 800510
 * Guilherme Campos Bortoletto – 801477
-
-**Projeto:**
-**Detecção de Fake News com Processamento em Larga Escala Utilizando MongoDB Atlas e Python**
-
-**Ano:** 2025
 
 ---
 
