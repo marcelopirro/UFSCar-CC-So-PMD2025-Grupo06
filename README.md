@@ -1,13 +1,11 @@
 # Projeto de Disciplina – **Detecção de Fake News com Processamento em Larga Escala Utilizando MongoDB Atlas e Python**
 
----
 
 **Universidade Federal de São Carlos**  
 **Curso:** Bacharelado em Ciência da Computação de Sorocaba  
 **Disciplina:** Processamento Massivo de Dados  
 **Professora:** Profa. Dra. Sahudy Montenegro González  
 
----
 
 **Grupo 06**  
 
