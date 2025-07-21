@@ -13,16 +13,13 @@
 * Marcelo Pirro – 800510
 * Guilherme Campos Bortoletto – 801477
 
----
+
 
 ## Resumo
 
-O projeto tem como foco o desenvolvimento de um pipeline completo para a detecção automática de fake news, integrando tecnologias de armazenamento e processamento de dados. Utilizando o **MongoDB Atlas** como banco de dados NoSQL e a biblioteca **Pymongo** em um ambiente **Databricks** para a análise e processamento, o sistema é capaz de armazenar, transformar e analisar milhares de notícias jornalísticas.
+O projeto desenvolve um pipeline completo para detecção automática de fake news, integrando MongoDB Atlas e Pymongo em ambiente Databricks. Utiliza um conjunto de dados com 44 mil notícias, realizando pré-processamento, vetorização com TF-IDF e classificação com machine learning. Também realiza análise linguística para identificar padrões em conteúdos falsos, demonstrando a viabilidade da integração entre NoSQL e NLP.
 
-A solução trabalha com um conjunto de dados obtido do Kaggle, contendo aproximadamente 44 mil notícias reais e falsas. Após o pré-processamento, os registros são inseridos no MongoDB como documentos JSON. A partir daí, são realizadas operações de limpeza, tokenização, vetorização e transformação com TF-IDF. Com os dados preparados, são treinados modelos de machine learning para classificar os textos como verdadeiros ou falsos.
-
-Além da classificação automática, o projeto realiza uma análise exploratória linguística, identificando as palavras mais frequentes em conteúdos falsos, revelando padrões de escrita e vocabulário característicos. O pipeline completo demonstra a viabilidade técnica da integração de um banco de dados NoSQL robusto com bibliotecas de ciência de dados em Python para tarefas de Processamento de Linguagem Natural (NLP).
-
+---
 ## Objetivo
 
 Nosso objetivo é desenvolver um pipeline completo de detecção de notícias falsas (fake news) por meio da análise de padrões linguísticos em textos jornalísticos. Buscamos demonstrar a aplicação de tecnologias NoSQL e frameworks de processamento para:
